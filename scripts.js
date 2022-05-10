@@ -21,19 +21,19 @@ const transactions = [
     {
         id: 1,
         description: 'Energia',
-        amount: -50000,
+        amount: -500,
         date: '12/04/2022',
     },
     {
         id: 2,
         description: 'Criação de Website',
-        amount: 30000,
+        amount: 3000,
         date: '23/04/2022',
     },
     {
         id: 3,
         description: 'Internet',
-        amount: -1000,
+        amount: -100,
         date: '10/04/2022',
     },
 ]
@@ -73,5 +73,9 @@ const DOM = {
     }
 }
 
-DOM.addTransaction(transactions[0])
-DOM.addTransaction(transactions[1])
+//DOM.addTransaction(transactions[0])
+//DOM.addTransaction(transactions[1])
+
+transactions.forEach(function(transaction) {
+    DOM.addTransaction(transaction)
+})
