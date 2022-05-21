@@ -21,19 +21,19 @@ const transactions = [
     {
         id: 1,
         description: 'Energia',
-        amount: -500,
+        amount: -50000,
         date: '12/04/2022',
     },
     {
         id: 2,
         description: 'Criação de Website',
-        amount: 3000,
+        amount: 300000,
         date: '23/04/2022',
     },
     {
         id: 3,
         description: 'Internet',
-        amount: -100,
+        amount: -10000,
         date: '10/04/2022',
     },
 ]
@@ -66,7 +66,7 @@ const DOM = {
 
         const html = `
         <td class="description">${transaction.description}</td>
-        <td class="${CSSclass}">${transaction.amount}</td>
+        <td class="${CSSclass}">${amount}</td>
         <td class="date">${transaction.date}</td>
         <td>
         <img src="./assets/minus.svg" alt="Remover Transação">
@@ -79,6 +79,17 @@ const DOM = {
 const Utils = {
     formatCurrency(value) {
         const signal = Number(value) < 0 ? "-" : ""
+
+        value = String(value).replace(/\D/g, "")
+
+        value = Number(value) / 100
+
+        value = value.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        })
+
+       return signal + value
     }
 }
 
