@@ -62,6 +62,8 @@ const DOM = {
     innerHTMLTransaction(transaction) {
         const CSSclass = transaction.amount > 0 ? "income" : "expense"
 
+        const amount = Utils.formatCurrency(transaction.amount)
+
         const html = `
         <td class="description">${transaction.description}</td>
         <td class="${CSSclass}">${transaction.amount}</td>
@@ -71,6 +73,12 @@ const DOM = {
         </td>
         `
         return html
+    }
+}
+
+const Utils = {
+    formatCurrency(value) {
+        const signal = Number(value) < 0 ? "-" : ""
     }
 }
 
