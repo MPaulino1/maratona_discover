@@ -2,6 +2,12 @@
   <img alt="dev.finances" title="dev.finances" src="https://user-images.githubusercontent.com/99915640/171053506-7e50ddbb-3850-4685-91a3-7c2b66ee5fb5.svg" width="220px" />
 </h1>
 
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
 
 <br>
 
